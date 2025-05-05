@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edifice - Puzzle Interface</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        />
+        <link rel="stylesheet" href="../assets/css/parsons.css" />
+        <style>
+            #sortable {
+                list-style-type: none;
+            }
+            #sortable li {
+                cursor: move;
+            }
+            .sortable-code {
+                margin-left: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="puzzle-container">
+            <nav class="puzzle-selector">
+                <select id="puzzle-file-select"></select>
+                <select id="puzzle-select" style="display: none"></select>
+            </nav>
+            <div id="puzzle-content">
+                <h2 id="puzzle-title"></h2>
+                <p id="puzzle-description"></p>
+                <div class="parsons">
+                    <div
+                        id="sortable"
+                        class="sortable-code code-highlight"
+                    ></div>
+                </div>
+                <div id="feedback" class="alert"></div>
+                <div class="button-group">
+                    <button id="check-button" class="btn">Check Answer</button>
+                    <button id="show-solution" class="btn btn-secondary">
+                        Show Solution
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Load dependencies in correct order -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+        <script src="../assets/js/parsons.js"></script>
+        <script src="../assets/js/viewer.js"></script>
+    </body>
+</html>

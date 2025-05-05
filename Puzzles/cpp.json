@@ -1,0 +1,25 @@
+{
+    "puzzles": [
+        {
+            "id": "cpp_hello_world",
+            "title": "Hello World in C++",
+            "description": "Create a C++ program that outputs a greeting message using cout.",
+            "difficulty": "beginner",
+            "codeBlocks": [
+                "#include <iostream>",
+                "using namespace std;",
+                "int main() {",
+                "    string name = \"Alice\";",
+                "    cout << \"Hello, \" << name << \"!\" << endl;",
+                "    return 0;",
+                "}"
+            ],
+            "solution": [0, 1, 2, 3, 4, 5, 6],
+            "hints": [
+                "Include the iostream header first",
+                "Declare the namespace",
+                "Main function is required"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "puzzles": [
+        {
+            "id": "python_if_statement",
+            "title": "Python If Statement",
+            "description": "Create a Python program that uses if-else statement to check a number. Pay attention to the indentation!",
+            "difficulty": "beginner",
+            "codeBlocks": [
+                "number = 10",
+                "if number > 0:",
+                "    print(\"The number is positive\")",
+                "    if number > 5:",
+                "        print(\"The number is greater than 5\")",
+                "else:",
+                "    print(\"The number is not positive\")"
+            ],
+            "solution": [0, 1, 2, 3, 4, 5, 6],
+            "hints": [
+                "Start by declaring the variable",
+                "First level if statement should not be indented",
+                "Statements inside if should be indented"
+            ]
+        }
+    ]
+}
