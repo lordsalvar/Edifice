@@ -73,23 +73,36 @@ function loadPuzzleFromFile(file, puzzleIdx = 0) {
                 parsons.options.incorrectSound = false;
                 parsons.shuffleLines();
 
+                // Setup show solution button with toggle functionality
+                let showingSolution = false;
                 document.getElementById("show-solution").onclick = function () {
-                    sortableArea.innerHTML = "";
-                    const ul = document.createElement("ul");
-                    ul.className = "sortable-code";
-                    sortableArea.appendChild(ul);
-                    puzzle.codeBlocks.forEach((block) => {
-                        const li = document.createElement("li");
-                        li.textContent = block;
-                        li.classList.add("correct");
-                        if (block.startsWith("    ")) {
-                            li.style.marginLeft = "50px";
-                        }
-                        ul.appendChild(li);
-                    });
-                    feedback.textContent = "This is the correct answer!";
-                    feedback.className = "alert success";
-                    feedback.style.display = "block";
+                    if (showingSolution) {
+                        // Reload puzzle
+                        parsons.init(codeString);
+                        parsons.shuffleLines();
+                        feedback.style.display = "none";
+                        this.textContent = "Show Solution";
+                    } else {
+                        // Show solution
+                        sortableArea.innerHTML = "";
+                        const ul = document.createElement("ul");
+                        ul.className = "sortable-code";
+                        sortableArea.appendChild(ul);
+                        puzzle.codeBlocks.forEach((block) => {
+                            const li = document.createElement("li");
+                            li.textContent = block;
+                            li.classList.add("correct");
+                            if (block.startsWith("    ")) {
+                                li.style.marginLeft = "50px";
+                            }
+                            ul.appendChild(li);
+                        });
+                        feedback.textContent = "This is the correct answer!";
+                        feedback.className = "alert success";
+                        feedback.style.display = "block";
+                        this.textContent = "Try Again";
+                    }
+                    showingSolution = !showingSolution;
                 };
 
                 document.getElementById("check-button").onclick = function () {
