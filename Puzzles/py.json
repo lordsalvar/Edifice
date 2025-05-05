@@ -20,6 +20,28 @@
                 "First level if statement should not be indented",
                 "Statements inside if should be indented"
             ]
+        },
+        {
+            "id": "python_function",
+            "title": "Python Function Definition",
+            "description": "Create a Python function that calculates the area of a rectangle using length and width parameters. Pay attention to proper indentation!",
+            "difficulty": "beginner",
+            "codeBlocks": [
+                "def calculate_area(length, width):",
+                "    area = length * width",
+                "    return area",
+                "",
+                "length = 5",
+                "width = 3",
+                "result = calculate_area(length, width)",
+                "print(f\"Area of rectangle: {result}\")"
+            ],
+            "solution": [0, 1, 2, 3, 4, 5, 6, 7],
+            "hints": [
+                "Function definition starts without indentation",
+                "Function body must be indented",
+                "Variables outside function should not be indented"
+            ]
         }
     ]
 }
